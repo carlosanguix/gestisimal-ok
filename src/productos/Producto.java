@@ -1,7 +1,7 @@
 package productos;
 
 
-// TODO Probar en clase a cambiar el encapsulamiento (private, protected, package)
+//
 public class Producto {
 
 	//		ATRIBUTOS

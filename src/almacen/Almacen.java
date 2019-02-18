@@ -67,20 +67,14 @@ public class Almacen {
 				System.out.println(this.listaDeProductos.get(i));
 			}
 		}
-
-
 	}
 
 	// Modificar un producto
-	public void modificarProducto (String codigoProducto) {
+	public void modificarProducto (String codigoProducto, int opcion) {
 		
 		Scanner sc = new Scanner(System.in);
 		
 		int posicionProducto = this.buscarProductoPorCodigo(codigoProducto);
-		
-		menuModificar();
-		int opcion = sc.nextInt();
-		sc.nextLine();
 		
 		switch (opcion) {
 		case 1:

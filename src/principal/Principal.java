@@ -21,7 +21,16 @@ public class Principal {
 
 	}
 
+	private static void menuModificar () {
 
+		System.out.println("\nQué desea modificar del producto?");
+		System.out.println(" 1- Código.");
+		System.out.println(" 2- Nombre.");
+		System.out.println(" 3- Precio de compra.");
+		System.out.println(" 4- Precio de venta.");
+		System.out.print("\nOpción: ");
+
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -76,10 +85,19 @@ public class Principal {
 			case 3:
 
 				// Dar de baja un producto
-				System.out.println("Indique el código del producto a eliminar.");
-				System.out.print("Código: ");
-				codigoProducto = sc.nextLine();
-				productosAlmacen.eliminarProductoDeLaLista(codigoProducto);
+				// Si el almacén no esté vacío
+				if (!productosAlmacen.getListaDeProductos().isEmpty()) {
+					
+					System.out.println("Indique el código del producto a eliminar.");
+					System.out.print("Código: ");
+					codigoProducto = sc.nextLine();
+					productosAlmacen.eliminarProductoDeLaLista(codigoProducto);
+					
+				} else {
+					
+					System.out.println("No hay ningún producto en el almacén.");
+				}
+				
 
 				break;
 			case 4:
@@ -89,8 +107,11 @@ public class Principal {
 				System.out.print("Código: ");
 				codigoProducto = sc.nextLine();
 				
-				productosAlmacen.modificarProducto(codigoProducto);
-
+				menuModificar();
+				opcion = sc.nextInt();
+				
+				productosAlmacen.modificarProducto(codigoProducto, opcion);
+				
 				break;
 			case 5:
 
