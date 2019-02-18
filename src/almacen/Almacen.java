@@ -38,7 +38,14 @@ public class Almacen {
 		// Buscamos el producto en el almacén
 		int posicionProducto = this.buscarProductoPorCodigo(codigoAEliminar);
 		// Eliminamos el producto en cuestión (por índice)
-		this.listaDeProductos.remove(posicionProducto);
+		if (posicionProducto < 0) {
+			
+			System.out.println("No existe ningún producto con ese código.");
+		} else {
+			
+			this.listaDeProductos.remove(posicionProducto);
+		}
+		
 
 	}
 
@@ -149,7 +156,6 @@ public class Almacen {
 		}
 
 		return posicionProducto;
-
 	}
 
 	private static void menuModificar () {

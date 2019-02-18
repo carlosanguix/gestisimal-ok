@@ -145,11 +145,6 @@ public class Principal {
 			default:
 				break;
 			}
-
 		}
-
-
-
 	}
-
 }
