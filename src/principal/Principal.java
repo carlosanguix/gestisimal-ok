@@ -62,12 +62,16 @@ public class Principal {
 			case 1:
 
 				// Listar productos
+				System.out.println("    ** Listado de productos **");
+				System.out.println("       --------------------\n");
+				
 				productosAlmacen.listarProductos();
 
 				break;
 			case 2:
 
 				// Dar de alta un producto
+				// TODO Agrupar en una función que devuelva un producto
 				System.out.print("Codigo del producto: ");
 				codigoProducto = sc.nextLine();
 				System.out.print("Nombre del producto: ");
@@ -85,7 +89,7 @@ public class Principal {
 			case 3:
 
 				// Dar de baja un producto
-				// Si el almacén no esté vacío
+				// Si el almacén no está vacío
 				if (!productosAlmacen.getListaDeProductos().isEmpty()) {
 					
 					System.out.println("Indique el código del producto a eliminar.");
@@ -116,12 +120,20 @@ public class Principal {
 			case 5:
 
 				// Entrada de mercancía de un producto
+				System.out.print("Código de producto: ");
+				codigoProducto = sc.nextLine();
+				
+				productosAlmacen.modificarProducto(codigoProducto, 5);
 
 				break;
 			case 6:
 
 				// Salida de mercancía de un producto
-
+				System.out.print("Código de producto: ");
+				codigoProducto = sc.nextLine();
+				
+				productosAlmacen.modificarProducto(codigoProducto, 6);
+				
 				break;
 			case 0:
 

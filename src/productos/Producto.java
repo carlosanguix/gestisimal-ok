@@ -1,7 +1,6 @@
 package productos;
 
 
-//
 public class Producto {
 
 	//		ATRIBUTOS
@@ -62,7 +61,26 @@ public class Producto {
 
 	//		METODOS
 	// Entrada de mercancía (++cantidad)
+	public void entradaDeMercancia (int cantidadEntrada) {
+		
+		this.cantidad += cantidadEntrada;
+	}
+	
 	// Salida de mercancía (--cantidad)
+	public void salidaDeMercancia (int cantidadSalida) {
+		
+		if (this.cantidad - cantidadSalida <=  0) {
+			
+			this.cantidad = 0;
+		
+		} else {
+			
+			this.cantidad -= cantidadSalida;
+		}
+		
+		
+	}
+	
 	// Modificar codigo
 	public void modificarCodigoProducto (String nuevoCodigo) {
 		
