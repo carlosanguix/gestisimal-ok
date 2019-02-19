@@ -158,17 +158,6 @@ public class Almacen {
 		return posicionProducto;
 	}
 
-	private static void menuModificar () {
-
-		System.out.println("\nQué desea modificar del producto?");
-		System.out.println(" 1- Código.");
-		System.out.println(" 2- Nombre.");
-		System.out.println(" 3- Precio de compra.");
-		System.out.println(" 4- Precio de venta.");
-		System.out.print("\nOpción: ");
-
-	}
-
 	@Override
 	public String toString() {
 		return listaDeProductos + "\n";
